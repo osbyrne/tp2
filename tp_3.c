@@ -4,14 +4,14 @@
 #include <unistd.h>
 
 /*
-Compile :
-clang tp_2.c -o tp_2.exe
+compile :
+clang tp_3.c -o tp_3.exe
 
-Run :
-./tp_2.c
+run :
+./tp_3.c
 
 in another terminal :
-kill -SIGUSR1 <pid>
+for i in {1..5}; do kill -SIGUSR1 PID; done
 */
 
 typedef unsigned int milliseconds;
@@ -21,18 +21,20 @@ void do_work(milliseconds duration)
     milliseconds i;
     for (i = 0; i < duration; i++)
     {
-        usleep(1000); // the unit of usleep input is microseconds
+        usleep(1000);
     }
 }
 
 void handle_sigusr1(int signum)
 {
-    printf("SIGUSR1 received by process %d\n", getpid());
+    printf("SIGUSR1 received by process %d - Starting work\n", getpid());
+    do_work(2000); // Do 2 seconds of work when signal is received
+    printf("Work completed\n");
 }
 
 int main()
 {
-    printf("Process ID: %d\n", getpid()); // send the command "kill -SIGUSR1 <pid>" to send a signal to this process
+    printf("Process ID: %d\n", getpid());
     signal(SIGUSR1, handle_sigusr1);
 
     while (1)

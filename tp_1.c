@@ -2,6 +2,15 @@
 #include <stdlib.h>
 #include <unistd.h>
 
+/*
+
+Compile :
+clang tp_1.c -o tp_1.exe
+
+Run :
+./tp_1.c
+*/
+
 typedef unsigned int milliseconds;
 
 void do_work(milliseconds duration)
