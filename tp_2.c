@@ -5,10 +5,10 @@
 
 /*
 Compile :
-clang tp_2.c -o tp_2.exe
+clang tp_2.c -o tp_2.compiled
 
 Run :
-./tp_2.c
+./tp_2.compiled
 
 in another terminal :
 kill -SIGUSR1 <pid>

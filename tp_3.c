@@ -5,10 +5,10 @@
 
 /*
 compile :
-clang tp_3.c -o tp_3.exe
+clang tp_3.c -o tp_3.compiled
 
 run :
-./tp_3.c
+./tp_3.compiled
 
 in another terminal :
 for i in {1..5}; do kill -SIGUSR1 PID; done

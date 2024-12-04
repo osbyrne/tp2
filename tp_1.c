@@ -5,10 +5,10 @@
 /*
 
 Compile :
-clang tp_1.c -o tp_1.exe
+clang tp_1.c -o tp_1.compiled
 
 Run :
-./tp_1.c
+./tp_1.compiled
 */
 
 typedef unsigned int milliseconds;

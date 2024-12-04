@@ -1,9 +1,9 @@
 /*
 compile :
-clang tp_4.c -o tp_4.exe
+clang tp_4.c -o tp_4.compiled
 
 run :
-./tp_4.c
+./tp_4.compiled
 
 in another terminal :
 for i in {1..5}; do kill -SIGINT PID; done
