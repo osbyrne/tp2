@@ -1,0 +1,11 @@
+# Ignore everything
+*
+
+# Track directories
+!*/
+
+# Track these files
+!.gitignore
+!*.nix
+!*.c
+!*.h
