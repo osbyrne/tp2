@@ -8,4 +8,5 @@
 !.gitignore
 !*.nix
 !*.c
-!*.h
+!*.txt
+!*.md

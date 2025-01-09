@@ -8,7 +8,6 @@ run :
 #include <stdio.h>
 #include <unistd.h>
 #include <time.h>
-#include <math.h>
 
 void t2() {
     usleep(166500); // 0.1665 seconds
@@ -19,7 +18,6 @@ void t2() {
 void t3() {
     usleep(500000); // 0.5 seconds
     printf("T3 executed\n");
-
     fflush(stdout);
 }
 
@@ -35,14 +33,17 @@ void do_work(struct timespec *start) {
 
     double elapsed = (now.tv_sec - start->tv_sec) + (now.tv_nsec - start->tv_nsec) / 1e9;
 
-    if (fmod(elapsed, 2.0) < 1e-3) {
+    if (elapsed >= 2.0) {
         t2();
+        start->tv_sec += 2;
     }
-    if (fmod(elapsed, 3.0) < 1e-3) {
+    if (elapsed >= 3.0) {
         t3();
+        start->tv_sec += 3;
     }
-    if (fmod(elapsed, 4.0) < 1e-3) {
+    if (elapsed >= 4.0) {
         t4();
+        start->tv_sec += 4;
     }
 }
 

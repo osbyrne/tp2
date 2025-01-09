@@ -1,0 +1,6 @@
+Problèmes potentiels :
+
+- La fonction sleep() ne prend pas en compte le temps d'exécution de la tâche. Si la tâche prend plus de temps que prévu, la période totale sera supérieure à une seconde.
+- sleep() peut ne pas être très précis, surtout pour des périodes courtes.
+- alarm() et les signaux peut rendre le code plus complexe et difficile à déboguer.
+- Les signaux peuvent interrompre d'autres parties du programme, ce qui peut causer des comportements inattendus.

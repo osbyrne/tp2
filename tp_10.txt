@@ -1,0 +1,3 @@
+Le programme tp_9.c est considéré comme deterministe. 
+
+Si des variations advenaient, elles pourraient êtres causées par le système d'exploitation peut interrompre le programme pour exécuter d'autres processus, la précision variable de `usleep()` et `nanosleep()` sur des périodes courtes et la charge du système, qui peut affecter la fréquence d'exécution des tâches.
