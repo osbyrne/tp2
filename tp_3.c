@@ -1,8 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <signal.h>
-#include <unistd.h>
-
 /*
 compile :
 clang tp_3.c -o tp_3.compiled
@@ -13,6 +8,10 @@ run :
 in another terminal :
 for i in {1..5}; do kill -SIGUSR1 PID; done
 */
+#include <stdio.h>
+#include <stdlib.h>
+#include <signal.h>
+#include <unistd.h>
 
 typedef unsigned int milliseconds;
 

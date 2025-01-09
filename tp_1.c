@@ -1,7 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-
 /*
 
 Compile :
@@ -10,6 +6,9 @@ clang tp_1.c -o tp_1.compiled
 Run :
 ./tp_1.compiled
 */
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
 
 typedef unsigned int milliseconds;
 
