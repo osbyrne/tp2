@@ -1,6 +1,6 @@
 /*
 Compile :
-clang tp_2.c -o tp_2.compiled
+clang tp_2.c -o tp_2.c.compiled
 
 Run :
 ./tp_2.compiled

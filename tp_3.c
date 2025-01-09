@@ -1,6 +1,6 @@
 /*
 compile :
-clang tp_3.c -o tp_3.compiled
+clang tp_3.c -o tp_3.c.compiled
 
 run :
 ./tp_3.compiled
